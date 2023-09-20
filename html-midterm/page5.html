@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page 5</title>
+</head>
+<body>
+    <div class="navbar">
+        <a href="/html-midterm/page1.html">Page 1</a>
+        <span> | </span>
+        <a href="/html-midterm/page2.html">Page 2</a>
+        <span> | </span>
+        <a href="/html-midterm/page3.html">Page 3</a>
+        <span> | </span>
+        <a href="/html-midterm/page4.html">Page 4</a>
+        <span> | </span>
+        <a href="/html-midterm/page5.html">Page 5</a>
+        <span> | </span>
+    </div>
+
+    <h1>Good Old Errors</h1>
+
+    <h2>Page 1</h2>
+    <h3>We are told there are 5 errors with HTML code</h3>
+
+    <ul>
+        <li>There was no beginning DOCTYPE or specificity of the language. VS Code did these beginning steps for me on this page with "! enter", so I copied these two things at the top of page5.html and pasted them to page1.html</li>
+        <li>One p tag was not closed with a "/p", just "p", so I added the / to finish the paragraph tag.</li>
+        <li>One em tag was closed with an "e" tag instead of "/em", so I changed the e to /em.</li>
+        <li>The apostraphes used in the text in the paragraph tags were a common ASCII character U+0060, so I rewrote them in the different "font" that my immediate VS code writes in and it was no longer red.</li>
+        <li>VS Code also gave me the lines with "meta charset" and the "meta name" from my nifty "! enter", so I added those to the document and no more errors popped up on the W3C Validator!</li>
+    </ul>
+
+    <h2>Page 2</h2>
+    <h3>We are told there are 3 errors with code and 1 logic error</h3>
+    
+    <ul>
+        <li>There was an empty bold tag, with the first "b", but no closing "/b" just empty brackets, so I added the /b.</li>
+        <li>Same issue with the apostraphes as Page 1, so I fixed them the same way.</li>
+        <li>The headings jump from h1 being "New Bradford Inn" to immediately h3 being "Description", so I changed that to an h2.</li>
+        <li>"Histroy" heading was an h6 instead of an h2, so I changed it to h2.</li>
+        <li>"Closure" heading was an h3 instead of an h2, so I changed it to h2.</li>
+        <li>Heading "Interior" was inside bolded tags, but h2 cannot be a child of b, so I got rid of the bold tags.</li>
+        <li>Instead of a link, there is a "where do i go" under Interior, so I checked the source page and added the actual link from that page to page2.html.</li>
+        <li>There was also a "broken link" under Description, so I went to the source and re-copied and pasted the correct link.</li>
+    </ul>
+    
+    <h2>Page 3</h2>
+    <h3>We are told there are 2 errors with code and 1 logic error</h3>
+    
+    <ul>
+        <li>The headings were off yet again, jumping from h1 to h3 to h4. I changed the h3 to h2 and the h3 also to h2 since I think it looks best that way instead of all different heading types.</li>
+        <li>One list item, supposed to be tagged "li", was tagged "l", so I changed both the beginning and end tag to "li"</li>
+        <li>One "td" tag was not finished, with empty brackets instead of "/td", so I added it into the brackets.</li>
+        <li>Axelia's "td" tag was not inside the "tr" tag, so I moved it.</li>
+        <li>Most of the table was in a wonky order, with some first names accidentally placed in the "tr" before it was supposed to be, and some ages in the one after. So, I kept the order of all the "td" tags, but made sure they were in the groups they were supposed to be in with only the first name, last name, and age per "tr".</li>
+        <li>"Zapata" was in a "th" tag instead of a "td" tag, so I fixed that.</li>
+    </ul>
+
+    
+    <h2>Page 4</h2>
+    <h3>We are told there are 3 errors with code and 1 logic error</h3>
+    
+    <ul>
+        <li>One image only in an "img" tag, and not also nested in a "td" tag, so I added it around the image tags.</li>
+        <li>One image did not have the beginning "td" tag, just the end one, so I added the beginning tag.</li>
+        <li>One image did not have the end "td" tag, just the beginning one, so I added the end tag.</li>
+        <li>The pictures did not follow the headers for the table. (example: dogs were all in the first row, but the dogs header was for the first column). So, because I know how to move the images more than the table headers, I switched the images around to match what the headers said.</li>
+        <li>There was no DOCTYPE at the top of the document, so I added it and made sure it included all the same attributes as my page5.html's top does.</li>
+        <li>No images had an "atl" attribute, so I added it to all the links and named it after the pictures' names.</li>
+    </ul>
+
+    
+</body>
+</html>
