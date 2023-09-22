@@ -33,8 +33,11 @@ body {
   border-radius: 0 0 1.5em 1.5em;
   height: 3em;
   padding: 1em;
-  font-size: 1.5em;
   line-height: 1.5em;
+}
+
+.card footer p {
+  font-size: 1.5em;
 }
 
 
@@ -64,10 +67,12 @@ body {
 }
 
 
+/*Own card */
 
 
 /*Setup of card container*/
 .card2 {
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   width: 35em;
   height: 22em;
   margin: 5em auto;
@@ -89,8 +94,11 @@ body {
   border-radius: 0 0 1.5em 1.5em;
   height: 3em;
   padding: 1em;
-  font-size: 1.5em;
   line-height: 1.5em;
+}
+
+.card2 footer p {
+  font-size: 1.5em;
 }
 
 
