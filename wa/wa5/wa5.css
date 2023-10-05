@@ -1,0 +1,17 @@
+.main {
+    width: 100%;
+}
+
+.scoreboard img {
+    position: fixed;
+    bottom: 2%;
+    width: 50%;
+    margin-left: 25%;
+}
+
+.logo img {
+    position: fixed;
+    right: 2%;
+    width: 15%;
+    top: 2%;
+}
