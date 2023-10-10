@@ -1,0 +1,44 @@
+body {
+    background-color: green;
+}
+
+
+/* using vw (view width) which makes sure it doesn't go over the page when moving the screen size*/
+/* pixels wasn't right! */
+div {
+    background-color: blue;
+    color: white;
+    font-size: 5vw;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5vw;
+    margin: 2.5vw;
+    border: yellow 5px solid;
+}
+
+/* flex makes them in rows, not columns - flex ALWAYS defaults to rows*/
+/* flex is 1D */
+/* .div-wrapper {
+    display: flex;
+} */
+
+/*grid is 2D
+can make things that look like tables*/
+/* fr unit = fractional - make 3 equal columns if 1fr 1fr 1fr
+higher fr, more space it'll take up*/
+.div-wrapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+@media screen and (max-width: 900px) {
+    body {
+        background-color: red;
+    }
+
+    .div-wrapper {
+        display: flex;
+        /* explicitly say when flex is not row*/
+        flex-direction: column;
+    }
+}
