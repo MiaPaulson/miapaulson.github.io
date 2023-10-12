@@ -1,0 +1,179 @@
+  
+@media screen and (min-width: 500px) {
+  
+  body {
+      background-color: #fff;
+      color: #333;
+      margin: 0;
+      font: 1.2em / 1.2 Arial, Helvetica, sans-serif;
+    }
+
+    img {
+        max-width: 100%;
+        display: block;
+    }
+    
+    .logo {
+      font-size: 200%;
+      padding: 50px 20px;
+      margin: 0 auto;
+      max-width: 980px;
+    }
+    
+    .grid {
+      margin: 0 auto;
+      padding: 0 20px;
+      max-width: 980px;
+
+      /*I added*/
+      display: flex;
+    }
+      
+      article {
+        flex: 50%;
+      }
+      aside {
+        flex: 50%;
+      }
+    
+    
+    nav {
+      background-color: #000;
+      padding: .5em;
+
+      /*I added*/
+      position: sticky;
+      top: 0px;
+      
+    }
+    
+    nav ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      /*I added*/
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      
+      
+    }
+    
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: .5em 1em;
+      
+    }
+    
+    .photos {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      /*I added*/
+      display: grid;
+      gap: 1px 1px;
+      grid-template-columns: 100px 100px;
+    }
+
+    .feature {
+        width: 200px;
+
+        /*I added*/
+        float: left;
+        padding: 0 20px 20px 0;
+    }
+}
+
+
+
+@media screen and (max-width: 500px) {
+  
+  body {
+      background-color: #fff;
+      color: #333;
+      margin: 0;
+      font: 1.2em / 1.2 Arial, Helvetica, sans-serif;
+    }
+
+    img {
+        max-width: 100%;
+        display: block;
+    }
+    
+    .logo {
+      font-size: 200%;
+      padding: 50px 20px;
+      margin: 0 auto;
+      max-width: 980px;
+    }
+    
+    .grid {
+      margin: 0 auto;
+      padding: 0 20px;
+      max-width: 980px;
+
+      /*I added*/
+      display: flex;
+      flex-direction: column;
+    }
+      
+      article {
+        flex: 50%;
+      }
+      aside {
+        flex: 50%;
+      }
+    
+    
+    nav {
+      background-color: #000;
+      padding: .5em;
+
+      /*I added*/
+      position: sticky;
+      top: 0px;
+      
+    }
+    
+    nav ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      /*I added*/
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      
+      
+    }
+    
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: .5em 1em;
+      
+    }
+    
+    .photos {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      /*I added*/
+      display: grid;
+      gap: 1px 1px;
+      grid-template-rows: 100px 100px;
+    }
+
+    .feature {
+        width: 200px;
+
+        /*I added*/
+        float: left;
+        padding: 0 20px 20px 0;
+    }
+}
