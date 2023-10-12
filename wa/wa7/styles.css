@@ -30,10 +30,10 @@
     }
       
       article {
-        flex: 50%;
+        flex: 75%;
       }
       aside {
-        flex: 50%;
+        flex: 25%;
       }
     
     
@@ -121,10 +121,10 @@
     }
       
       article {
-        flex: 50%;
+        flex: 75%;
       }
       aside {
-        flex: 50%;
+        flex: 25%;
       }
     
     
