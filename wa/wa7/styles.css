@@ -29,12 +29,12 @@
       display: flex;
     }
       
-      article {
+      /* article {
         flex: 75%;
       }
       aside {
         flex: 25%;
-      }
+      } */
     
     
     nav {
@@ -120,12 +120,12 @@
       flex-direction: column;
     }
       
-      article {
+      /* article {
         flex: 75%;
       }
       aside {
         flex: 25%;
-      }
+      } */
     
     
     nav {
