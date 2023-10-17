@@ -1,0 +1,68 @@
+p {
+    font-size: 5vw;
+}
+
+#delay {
+    animation-duration: 4s;
+    animation-name: slidein;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+/* once animation is done, will get out of keyframe and just go to where it should be... default, left side of screen */
+@keyframes slidein {
+    /*from means at the very beginning (0%)*/ 
+    from {
+        margin-left: 100%;
+        width: 300%
+    }
+
+    /* % of the duration - so if 4s, 50% is at 2s */
+    50% {
+        color: greenyellow;
+        font-size: 50vw;
+    }
+
+    /*to means to the end of the duration (100%)*/
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
+}
+
+.getbig {
+    animation-duration: 4s;
+    animation-name: getbig;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes getbig {
+
+    from{
+        font-size: 1vw;
+        color: red;
+    }
+
+    to{
+        font-size: 100vw;
+        color: blue;
+    }
+}
+
+
+
+/* now, transitions: */
+/* used for user interation - input, hover, click, etc. */
+#hover {
+    font-size: 5vw;
+    transition-property: font-size;
+    transition-duration: 3s;
+    transition-delay: 1s;
+}
+
+
+#hover:hover {
+    font-size: 15vw;
+    color: purple;
+}
