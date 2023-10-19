@@ -22,14 +22,14 @@ nav a{
 }
 
 
-img{
+#image{
     width: 40vw;
     height: 24vh;
     background: url("pumpkin.jpg") no-repeat;
     display: inline-block;
 }
 
-img:hover {
+#image:hover {
     width: 75vw;
     height: 60vh;
     background: url("scarypumpkin.jpg") no-repeat;
