@@ -1,0 +1,74 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(87, 94, 25);
+    color: rgb(228, 132, 6);
+    font-family: cursive;
+}
+nav{
+    height: 50vh;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height:20px;
+    background-color: rgb(228, 132, 6);
+}
+nav a{
+    width:10vw;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+}
+
+
+img{
+    width: 40vw;
+    height: 24vh;
+    background: url("pumpkin.jpg") no-repeat;
+    display: inline-block;
+}
+
+img:hover {
+    width: 75vw;
+    height: 60vh;
+    background: url("scarypumpkin.jpg") no-repeat;
+}
+
+
+
+#red-ball{
+    background-color:rgb(198, 224, 68);
+    width: 20px;
+    height:20px;
+    border-radius: 50%;
+    position: absolute;
+    left:5vw;
+    top:0;
+
+    animation-duration: 5s;
+    animation-name: red-ball;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+
+
+@keyframes red-ball {
+
+    from{
+        margin-left: 100%;
+    }
+
+    to{
+        margin-right: 100%;
+    }
+}
+
+h1 {
+    transition-property: color;
+    transition-duration: 1s;
+}
+
+h1:hover {
+    color: black;
+}
