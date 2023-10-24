@@ -1,0 +1,27 @@
+/* always, no matter screen size */
+body {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h1 {
+    font-family: fantasy;
+}
+
+
+
+/* phone screen size */
+/* FIX EXACT #!!! MY COMPUTER ISN'T SAME PIXELS! USING 500PX TO SEE ON MY COMPUTER */
+@media screen and (max-width: 500px) {
+   
+}
+
+
+/* laptop screen size */
+/* FIX EXACT #!!! MY COMPUTER ISN'T SAME PIXELS! USING 1400PX TO SEE ON MY COMPUTER */
+@media screen and (min-width: 1400px) {
+    .event {
+        background-color: blue;
+    }
+
+    
+}
