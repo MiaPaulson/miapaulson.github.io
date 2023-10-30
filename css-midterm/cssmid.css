@@ -1,27 +1,73 @@
 /* always, no matter screen size */
 body {
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
 }
 
 h1 {
     font-family: fantasy;
 }
 
+/* too much text to be centered */
+.info {
+    text-align: left;
+}
+
+
+/* having default be laptop screen size, that way just changes when it gets smaller */
+/* had whole other media for laptop and there was no css for the sizes in between the two! */
+
+
+    .div-wrapper {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    h1 {
+        color: rgb(202, 174, 227);
+    }
+
+    .top {
+        color: rgb(63, 139, 169);
+    }
+    
+    .event1, .event2, .event3, .event4, .event5, .event6, .event7, .event8, .event9{
+        background-color: rgb(202, 174, 227);
+        padding: 15px;
+        border: 3px solid rgb(63, 139, 169);
+        border-radius: 5px;
+        width: 30%;
+        margin: 5px;
+    }
+
+
 
 
 /* phone screen size */
 /* FIX EXACT #!!! MY COMPUTER ISN'T SAME PIXELS! USING 500PX TO SEE ON MY COMPUTER */
-@media screen and (max-width: 500px) {
-   
-}
-
-
-/* laptop screen size */
-/* FIX EXACT #!!! MY COMPUTER ISN'T SAME PIXELS! USING 1400PX TO SEE ON MY COMPUTER */
-@media screen and (min-width: 1400px) {
-    .event {
-        background-color: blue;
+@media screen and (max-width: 400px) {
+    .div-wrapper {
+        display: flex;
+        flex-direction: column;
     }
 
+    h1 {
+        color: rgb(227, 174, 214);
+    }
+
+    .top {
+        color: rgb(63, 139, 169);
+    }
+    
+    .event1, .event2, .event3, .event4, .event5, .event6, .event7, .event8, .event9{
+        background-color: rgb(227, 174, 214);
+        padding: 15px;
+        border: 3px solid rgb(63, 139, 169);
+        border-radius: 5px;
+        width: 90%;
+        margin: 5px;
+    }
     
 }
