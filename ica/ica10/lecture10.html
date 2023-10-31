@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- internal style sheet just to keep all together for the lecture... do not do! -->
+    <style>
+        button {
+            font-family: "helvetica neue", helvetica, sans-serif;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            text-align: center;
+            border: 2px solid rgb(200 200 0 / 0.6);
+            background-color: rgb(0 217 217 / 0.6);
+            color: rgb(100 0 0 / 1);
+            box-shadow: 1px 1px 2px rgb(0 0 200 / 0.4);
+            border-radius: 10px;
+            padding: 3px 10px;
+            cursor: pointer;
+            height: 100px;
+            width: 150px;
+
+        }
+    </style>
+</head>
+<body>
+    <button type="button">Player1:</button>
+    <button id="press" type="button">Press me</button>
+
+    <script>
+        // variables defined using 'const' or 'let' - const can't change
+
+        //querySelector will only look for first button
+        const button = document.querySelector("button");
+        // either do get element by id/class, or put in the #/.
+        const press = document.getElementById("press");
+
+        button.addEventListener('click', updateName);
+        press.addEventListener('click', updateName);
+
+
+        function updateName() {
+            let name = prompt("Enter a new name");
+
+            //to help debug
+            console.log("the function ran correctly");
+            console.log(name);
+
+            button.textContent = `Player1: ${name}`;
+
+            //if change press button to a div and make same css as other putton, could do:
+            //press.innerHTML = `<h1>Hello!</h1>`
+        }
+    </script>
+    
+</body>
+</html>

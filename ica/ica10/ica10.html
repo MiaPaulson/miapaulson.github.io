@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ica10</title>
+
+    <style>
+        button {
+            font-family: cursive;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            text-align: center;
+            border: 2px solid rgb(200 200 0 / 0.6);
+            background-color: rgb(0 217 217 / 0.6);
+            color: rgb(100 0 0 / 1);
+            box-shadow: 1px 1px 2px rgb(0 0 200 / 0.4);
+            border-radius: 10px;
+            padding: 3px 10px;
+            cursor: pointer;
+            height: 300px;
+            width: 400px;
+
+        }
+    </style>
+</head>
+<body>
+    <button id = "background" type = "button">Background</button>
+    <button id = "text" type = "button">Text</button>
+
+    <script>
+        const background = document.getElementById("background");
+        const text = document.getElementById("text");
+
+        background.addEventListener('click', changeBack);
+        text.addEventListener('click', changeText);
+
+        function changeBack() {
+            background.style.backgroundColor = "pink";
+
+        }
+
+        function changeText() {
+            text.style.color = "yellow";
+        }
+    </script>
+    
+</body>
+</html>
