@@ -1,0 +1,49 @@
+h1 {
+  font-family: cursive;
+  text-align: center;
+  color: white;
+  background-color: black;
+  text-shadow: 1px 1px 1px gray;
+  border: 6px dotted gray;
+}
+
+body {
+  width: 640px;
+  margin: 0 auto;
+}
+
+.full-img {
+  position: relative;
+  display: block;
+  width: 640px;
+  height: 480px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 640px;
+  height: 480px;
+  background-color: rgba(0,0,0,0);
+}
+
+button {
+  font-family: cursive;
+  border: 0;
+  color: white;
+  background: black;
+  text-shadow: 1px 1px 1px gray;
+  border: 4px dotted gray;
+  position: absolute;
+  cursor: pointer;
+  top: 2px;
+  left: 2px;
+}
+
+.thumb-bar img {
+  display: block;
+  width: 20%;
+  float: left;
+  cursor: pointer;
+}
