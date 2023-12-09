@@ -24,18 +24,51 @@ function random(min, max) {
 // add the digit if it landed on it correctly to the digit array
 function addDigit() {
     const newDigit = document.querySelector('#phone-digits');
-    digit_arr.push(number);
-    console.log(digit_arr);
-    for(let i = 0; i < digit_arr.length; i++){
-    newDigit.textContent = digit_arr[i];
+    // digit_arr.push(number);
+    // console.log(digit_arr);
+    if(digit_arr.length === 0){
+        digit_arr.push("(");
+        digit_arr.push(number);
+        console.log(digit_arr);
     }
+    else if(digit_arr.length === 3){
+        digit_arr.push(number);
+        digit_arr.push(") ");
+        console.log(digit_arr);
+    }
+    else if(digit_arr.length === 8){
+        digit_arr.push("-");
+        digit_arr.push(number);
+        console.log(digit_arr);
+    }
+    else{
+        digit_arr.push(number);
+        console.log(digit_arr);
+    }
+    // no commas in printing phone number
+    newDigit.textContent = digit_arr.join("");
 
-    if(length(digit_arr) < 10) {
+    // length includes the extra characters not just the numbers
+    if(digit_arr.length < 13) {
         keepGoing();
     }
     else {
         const message = document.querySelector("h1");
-        message.textContent = "Congratulations! Your number is " + digit_arr;
+        message.textContent = "Congratulations! Your number is " + newDigit.textContent;
+        block_yes.style.display = "none";
+        block_no.style.display = "none";
+        block_yes.style.display = "none";
+
+        block_drop = document.getElementById("drop-ball");
+        block_question = document.getElementById("question");
+        block_digits = document.getElementById("phone-digits");
+        block_ball = document.getElementById("ball");
+
+        block_drop.style.display = "none";
+        block_question.style.display = "none";
+        block_digits.style.display = "none";
+        block_ball.style.display = "none";
+
     }
     
 
@@ -53,9 +86,41 @@ function keepGoing(){
 
     // putting the ball back on the top and redoing the animation
     ball.style.top = "0px";
+    ball.style.left = "0px";
     ball.classList.add('animate');
     block_yes.style.display = "none";
     block_no.style.display = "none";
+
+    // if(number === 0){
+    //     ball.style.left -= "2.5%";
+    // }
+    // else if(number === 1){
+    //     ball.style.left -= "14%";
+    // }
+    // else if(number === 2){
+    //     ball.style.left -= "23.5%";
+    // }
+    // else if(number === 3){
+    //     ball.style.left -= "33%";
+    // }
+    // else if(number === 4){
+    //     ball.style.left -= "42.5%";
+    // }
+    // else if(number === 5){
+    //     ball.style.left -= "53%";
+    // }
+    // else if(number === 6){
+    //     ball.style.left -= "62.5%";
+    // }
+    // else if(number === 7){
+    //     ball.style.left -= "73%";
+    // }
+    // else if(number === 8){
+    //     ball.style.left -= "81.5%";
+    // }
+    // else if(number === 9){
+    //     ball.style.left -= "92%";
+    // }
 
 };
 
@@ -71,65 +136,65 @@ function askQuestion(number) {
     question.textContent = "Is " + number + " the next digit in your phone number?";
     yeah.textContent = "Yes";
     nope.textContent = "No";
-
     
 
 };
 
 
-async function ballDrop() {
+function ballDrop() {
     console.log("ballDrop")
-    ball.style.top += "400px";
+    ball.style.top += "300px";
     // make the animation stop
     ball.classList.remove('animate');
-    number = 0;
-    // number = random(0,9);
+    number = random(0,9);
+
+    // const location = ball.getBoundingClientRect();
+    // console.log(location.top, location.right, location.bottom, location.left);
+    console.log(ball.offsetLeft);
+
+    // if(ball.offsetLeft === 8) {
+    //     ball.style.top -= "300px";
+    //     askQuestion(2);
+    // }
+
     if(number === 0){
         ball.style.left += "2.5%";
         askQuestion(number);
     }
-    if(number === 1){
+    else if(number === 1){
         ball.style.left += "14%";
         askQuestion(number);
     }
-    if(number === 2){
+    else if(number === 2){
         ball.style.left += "23.5%";
         askQuestion(number);
-
     }
-    if(number === 3){
+    else if(number === 3){
         ball.style.left += "33%";
         askQuestion(number);
-
     }
-    if(number === 4){
+    else if(number === 4){
         ball.style.left += "42.5%";
         askQuestion(number);
-
     }
-    if(number === 5){
+    else if(number === 5){
         ball.style.left += "53%";
         askQuestion(number);
-
     }
-    if(number === 6){
+    else if(number === 6){
         ball.style.left += "62.5%";
         askQuestion(number);
-
     }
-    if(number === 7){
+    else if(number === 7){
         ball.style.left += "73%";
         askQuestion(number);
-
     }
-    if(number === 8){
+    else if(number === 8){
         ball.style.left += "81.5%";
         askQuestion(number);
-
     }
-    if(number === 9){
+    else if(number === 9){
         ball.style.left += "92%";
         askQuestion(number);
-
     }
 };
