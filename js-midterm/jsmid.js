@@ -112,7 +112,7 @@ function askQuestion(number) {
 
 
 function ballDrop() {
-    console.log("ballDrop")
+    console.log("ballDrop");
     ball.style.top = "250px";
     // make the animation stop
     ball.classList.remove('animate');
