@@ -13,6 +13,8 @@ block_yes = document.getElementById("yes");
 block_yes.style.display = "none";
 block_no = document.getElementById("no");
 block_no.style.display = "none";
+block_drop = document.getElementById("drop-ball");
+
 
 
 
@@ -60,7 +62,6 @@ function addDigit() {
         block_no.style.display = "none";
         block_yes.style.display = "none";
 
-        block_drop = document.getElementById("drop-ball");
         block_question = document.getElementById("question");
         block_digits = document.getElementById("phone-digits");
         block_ball = document.getElementById("ball");
@@ -91,6 +92,8 @@ function keepGoing(){
     ball.classList.add('animate');
     block_yes.style.display = "none";
     block_no.style.display = "none";
+    block_drop.style.display = "block";
+
 
 };
 
@@ -98,6 +101,8 @@ function askQuestion(number) {
     console.log("digits:" + digit_arr);
     block_yes.style.display = "block";
     block_no.style.display = "block";
+    block_drop.style.display = "none";
+
 
     const question = document.querySelector('#question');
     const yeah = document.querySelector('#yes');
