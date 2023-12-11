@@ -9,7 +9,7 @@ body {
     font-size: larger;
 }
 /* each number option is its own grid placement */
-.grid-container {
+#grid-container {
     margin-top: 250px;
     display: grid;
     padding: 5px;

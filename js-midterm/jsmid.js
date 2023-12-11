@@ -65,11 +65,14 @@ function addDigit() {
         block_question = document.getElementById("question");
         block_digits = document.getElementById("phone-digits");
         block_ball = document.getElementById("ball");
+        block_grid = document.getElementById("grid-container");
+
 
         block_drop.style.display = "none";
         block_question.style.display = "none";
         block_digits.style.display = "none";
         block_ball.style.display = "none";
+        block_grid.style.display = "none";
 
     }
     
