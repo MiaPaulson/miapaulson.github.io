@@ -15,6 +15,7 @@ block_no = document.getElementById("no");
 block_no.style.display = "none";
 
 
+
 // to find random index to put ball into
 function random(min, max) {
     const num = Math.floor(Math.random() * (max - min + 1)) + min;
@@ -91,37 +92,6 @@ function keepGoing(){
     block_yes.style.display = "none";
     block_no.style.display = "none";
 
-    // if(number === 0){
-    //     ball.style.left -= "2.5%";
-    // }
-    // else if(number === 1){
-    //     ball.style.left -= "14%";
-    // }
-    // else if(number === 2){
-    //     ball.style.left -= "23.5%";
-    // }
-    // else if(number === 3){
-    //     ball.style.left -= "33%";
-    // }
-    // else if(number === 4){
-    //     ball.style.left -= "42.5%";
-    // }
-    // else if(number === 5){
-    //     ball.style.left -= "53%";
-    // }
-    // else if(number === 6){
-    //     ball.style.left -= "62.5%";
-    // }
-    // else if(number === 7){
-    //     ball.style.left -= "73%";
-    // }
-    // else if(number === 8){
-    //     ball.style.left -= "81.5%";
-    // }
-    // else if(number === 9){
-    //     ball.style.left -= "92%";
-    // }
-
 };
 
 function askQuestion(number) {
@@ -143,58 +113,50 @@ function askQuestion(number) {
 
 function ballDrop() {
     console.log("ballDrop")
-    ball.style.top += "300px";
+    ball.style.top = "250px";
     // make the animation stop
     ball.classList.remove('animate');
     number = random(0,9);
 
-    // const location = ball.getBoundingClientRect();
-    // console.log(location.top, location.right, location.bottom, location.left);
-    console.log(ball.offsetLeft);
-
-    // if(ball.offsetLeft === 8) {
-    //     ball.style.top -= "300px";
-    //     askQuestion(2);
-    // }
 
     if(number === 0){
-        ball.style.left += "2.5%";
+        ball.style.left = "2.5%";
         askQuestion(number);
     }
     else if(number === 1){
-        ball.style.left += "14%";
+        ball.style.left = "14%";
         askQuestion(number);
     }
     else if(number === 2){
-        ball.style.left += "23.5%";
+        ball.style.left = "23.5%";
         askQuestion(number);
     }
     else if(number === 3){
-        ball.style.left += "33%";
+        ball.style.left = "33%";
         askQuestion(number);
     }
     else if(number === 4){
-        ball.style.left += "42.5%";
+        ball.style.left = "42.5%";
         askQuestion(number);
     }
     else if(number === 5){
-        ball.style.left += "53%";
+        ball.style.left = "53%";
         askQuestion(number);
     }
     else if(number === 6){
-        ball.style.left += "62.5%";
+        ball.style.left = "62.5%";
         askQuestion(number);
     }
     else if(number === 7){
-        ball.style.left += "73%";
+        ball.style.left = "73%";
         askQuestion(number);
     }
     else if(number === 8){
-        ball.style.left += "81.5%";
+        ball.style.left = "81.5%";
         askQuestion(number);
     }
     else if(number === 9){
-        ball.style.left += "92%";
+        ball.style.left = "92%";
         askQuestion(number);
     }
 };
