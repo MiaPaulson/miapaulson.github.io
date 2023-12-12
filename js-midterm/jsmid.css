@@ -45,14 +45,14 @@ body {
     box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
   }
 
-.animate{
+/* .animate{
   width: 100%;
   height: 300px;
   position: absolute;
   
-}
+} */
 
-/* how the ball will be animated to move across top before being dropped down */
+/* how the ball will be animated to move across top before being dropped down
 .animate{
 
     animation-duration: 2s;
@@ -62,14 +62,14 @@ body {
   }
 
 /*doing the animation*/
-@keyframes slideacross {
+/* @keyframes slideacross {
     /*from means at the very beginning (0%)*/ 
-    from {
+    /* from {
       margin-left: 100%;
         
-    }
+    } */
     /*to means to the end of the duration (100%)*/
-    to {
+    /* to {
       margin-left: 0%;
-    }
-}
+    } */
+/* } */
