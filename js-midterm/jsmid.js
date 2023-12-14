@@ -1,5 +1,17 @@
+// js critiques and how I fixed them:
+//Don't let me decide if it is the right number or not... Just force me to be more careful about when i drop.
+    // did this by making the numbers not chosen at random, but based on position instead 
+    // (couldn't figure out how to before, thank you recitation!)
+//I think instead of doing a button drop, just have the ball drop when I click on the screen.
+    // got rid of the button by deleting it and its functionality
+    // made a new div for the part of the screen below the yes/no buttons, since if they are clicked inside of the
+    // overall event listener it breaks it (not sure why, just how it goes)
+
+
 // setting the buttons to their functions
-const dropBtn = document.querySelector('#drop-ball').addEventListener('click', ballDrop);
+// specifically : got ride of drop button, now a part of the screen is clickable
+    // only the part below the yes and no buttons. if they are in it, it breaks when you try to click one of the buttons
+const dropBtn = document.querySelector('#screen-click').addEventListener('click', ballDrop);
 const yesBtn = document.querySelector('#yes').addEventListener('click', addDigit);
 const noBtn = document.querySelector('#no').addEventListener('click', keepGoing);
 
@@ -10,6 +22,13 @@ let digit_arr = [];
 // added canvas stuff from the ball ica
 const canvas = document.querySelector('canvas');
 const width = (canvas.width = window.innerWidth);
+
+// will use the width of the grid container to see where the position of the ball is later
+const grid_contain = document.getElementById("grid-container");
+const grid_width = (grid_contain.width = window.innerWidth);
+// console.log(grid_width);
+
+// set velocity and position for the beginning of running the program
 let vel = 15;
 let pos = 0;
 
@@ -18,7 +37,7 @@ block_yes = document.getElementById("yes");
 block_yes.style.display = "none";
 block_no = document.getElementById("no");
 block_no.style.display = "none";
-block_drop = document.getElementById("drop-ball");
+//block_drop = document.getElementById("drop-ball");
 
 
 
@@ -33,21 +52,21 @@ function addDigit() {
     if(digit_arr.length === 0){
         digit_arr.push("(");
         digit_arr.push(number);
-        console.log(digit_arr);
+        // console.log(digit_arr);
     }
     else if(digit_arr.length === 3){
         digit_arr.push(number);
         digit_arr.push(") ");
-        console.log(digit_arr);
+        // console.log(digit_arr);
     }
     else if(digit_arr.length === 8){
         digit_arr.push("-");
         digit_arr.push(number);
-        console.log(digit_arr);
+        // console.log(digit_arr);
     }
     else{
         digit_arr.push(number);
-        console.log(digit_arr);
+        // console.log(digit_arr);
     }
 
     // array has commas, don't want commas in printing phone number, so use "join" function
@@ -74,7 +93,7 @@ function addDigit() {
         block_ball = document.getElementById("ball");
         block_grid = document.getElementById("grid-container");
 
-        block_drop.style.display = "none";
+        //block_drop.style.display = "none";
         block_question.style.display = "none";
         block_digits.style.display = "none";
         block_ball.style.display = "none";
@@ -103,18 +122,17 @@ function keepGoing(){
     // reblock the things I don't want
     block_yes.style.display = "none";
     block_no.style.display = "none";
-    block_drop.style.display = "block";
-
+    //block_drop.style.display = "block";
 
 };
 
 function askQuestion(number) {
 
     // pull up the displays of the yes and no button, block the others
-    console.log("digits:" + digit_arr);
+    // console.log("digits:" + digit_arr);
     block_yes.style.display = "block";
     block_no.style.display = "block";
-    block_drop.style.display = "none";
+    //block_drop.style.display = "none";
 
     const question = document.querySelector('#question');
     const yeah = document.querySelector('#yes');
@@ -130,110 +148,61 @@ function askQuestion(number) {
 
 
 function ballDrop() {
-    console.log(vel);
+    // console.log(vel);
 
     ball.style.top = "300px";
 
-    // make the animation stop (for some reason just making it "stop" true doesn't work... ugh)
+    // make the animation stop
+    //(for some reason just making it "stop" true and returning in the animation function doesn't work... ugh)
     vel = 0;
 
-    position = ball.style.left;
-
-    console.log("position: " + position);
-
+    // console.log(grid_width);
+    // making the ball.style.left an integer to compare it to the percentages of the page width
+    // + 25 so that it takes the position from the middle of the ball, not the left side
+    position = parseInt(ball.style.left) + 25;
+    // console.log(position);
+   
     //depending on the position of the ball, drop it and ask the question based on the specific digit that shares the similar position
-    if(position === 0 || position <= "60px"){
+    if(position <= grid_width/10){
         number = 0;
-        console.log(ball.style.left);
         askQuestion(number);
     }
-    else if(position > "60px" || position <= "200px"){
+    else if(position <= grid_width/10*2){
         number = 1;
-        console.log(ball.style.left);
         askQuestion(number);
     }
-    else if(position > "200px" || position <= "300px"){
+    else if(position <= grid_width/10*3){
         number = 2;
-        console.log("2:" + number);
-        console.log(ball.style.left);
         askQuestion(number);
     }
-    else if(position > "300px" || position <= "410px"){
+    else if(position <= grid_width/10*4){
         number = 3;
         askQuestion(number);
     }
-    else if(position > "410px" || position <= "510px"){
+    else if(position <= grid_width/10*5){
         number = 4;
         askQuestion(number);
     }
-    else if(position > "510px" || position <= "620px"){
+    else if(position <= grid_width/10*6){
         number = 5;
         askQuestion(number);
     }
-    else if(position > "620px" || position <= "720px"){
+    else if(position <= grid_width/10*7){
         number = 6;
         askQuestion(number);
     }
-    else if(position > "720px" || position <= "840px"){
+    else if(position <= grid_width/10*8){
         number = 7;
         askQuestion(number);
     }
-    else if(position > "840px" || position <= "950px"){
+    else if(position <= grid_width/10*9){
         number = 8;
         askQuestion(number);
     }
-    else if(position <= "1035px"){
-        console.log(9);
+    else if(position <= grid_width){
         number = 9;
         askQuestion(number);
     }
-    // just in case it's being wacky and it's any of the above options
-    else{
-        question.textContent = "Try again!";
-        keepGoing();
-    }
-
-
-    //if(number === 0){
-    //     ball.style.left = "2.5%";
-    //     askQuestion(number);
-    // }
-    // else if(number === 1){
-    //     ball.style.left = "14%";
-    //     askQuestion(number);
-    // }
-    // else if(number === 2){
-    //     ball.style.left = "23.5%";
-    //     askQuestion(number);
-    // }
-    // else if(number === 3){
-    //     ball.style.left = "33%";
-    //     askQuestion(number);
-    // }
-    // else if(number === 4){
-    //     ball.style.left = "42.5%";
-    //     askQuestion(number);
-    // }
-    // else if(number === 5){
-    //     ball.style.left = "53%";
-    //     askQuestion(number);
-    // }
-    // else if(number === 6){
-    //     ball.style.left = "62.5%";
-    //     askQuestion(number);
-    // }
-    // else if(number === 7){
-    //     ball.style.left = "73%";
-    //     askQuestion(number);
-    // }
-    // else if(number === 8){
-    //     ball.style.left = "81.5%";
-    //     askQuestion(number);
-    // }
-    // else if(number === 9){
-    //     ball.style.left = "92%";
-    //     askQuestion(number);
-    // }
 
 };
 
@@ -260,4 +229,5 @@ function animation(){
     requestAnimationFrame(animation); 
 };
 
+// call it once to start off the animation
 animation();

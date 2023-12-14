@@ -8,15 +8,18 @@
 
 </head>
 <body>
-    <h1>What is your phone number??</h1> 
+    <h1>What is your phone number?? click the screen to drop the ball</h1> 
     <div id = "phone-digits"></div>
-    <button type="button" class ="button" id="drop-ball">Drop the Ball</button>
+    <!-- <button type="button" class ="button" id="drop-ball">Drop the Ball</button> -->
     <div id= "question"></div>
     <button type="button" class="button" id="yes"></button>
     <button type="button" class="button" id="no"></button> 
-    <!-- putting things in a grid, thinking it'll be easier to access where the ball is -->
+
+    <!-- screen-click is where it is possible to click on the screen and drop the ball. if the buttons are in it, doesn't work for some reason!! -->
+<div id = "screen-click">
     <canvas></canvas>
     <div id = "ball" class = "animate"></div>
+    <!-- putting things in a grid, thinking it'll be easier to access where the ball is -->
     <div id = "grid-container">
         <h2>0</h2>
         <h2>1</h2>
@@ -29,6 +32,7 @@
         <h2>8</h2>
         <h2>9</h2>
     </div>
+</div>
 
     <script src="jsmid.js"></script>
 </body>
