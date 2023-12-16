@@ -6,6 +6,10 @@
     // got rid of the button by deleting it and its functionality
     // made a new div for the part of the screen below the yes/no buttons, since if they are clicked inside of the
     // overall event listener it breaks it (not sure why, just how it goes)
+    
+// after feedback from a friend:
+    // made the ball's velocity increase every time
+    // now it will be a smidge more frustrating!
 
 
 // setting the buttons to their functions
@@ -105,8 +109,49 @@ function addDigit() {
 // always call this function to continue to run program until entire phone number is added
 function keepGoing(){
     // "return" in the animation function didn't work - so instead, reset velocity so that the animation goes again
-    vel = 15;
+    // make velocity get bigger every time a digit is added to make more frustrating
+    //empty
+    if(digit_arr.length === 0){
+        vel = 15;
+    }
+    //(x
+    else if(digit_arr.length === 2){
+        vel = 18;
+    }
+    //(xx
+    else if(digit_arr.length === 3){
+        vel = 21;
+    }
+    //(xxx)
+    else if(digit_arr.length === 5){
+        vel = 24;
+    }
+    //(xxx) x
+     else if(digit_arr.length === 6){
+        vel = 27;
+    }
+    //(xxx) xx
+    else if(digit_arr.length === 7){
+        vel = 30;
+    }
+    //(xxx) xxx
+    else if(digit_arr.length === 8){
+        vel = 33;
+    }
+    //(xxx) xxx-x
+    else if(digit_arr.length === 10){
+        vel = 36;
+    }
+    //(xxx) xxx-xx
+    else if(digit_arr.length === 11){
+        vel = 39;
+    }
+    //(xxx) xxx-xxx
+    else if(digit_arr.length === 12){
+        vel = 41;
+    }
 
+    
     // clear all elements I do not want to see
     const clear = document.querySelector('#question');
     const clear1 = document.querySelector('#yes');
@@ -142,13 +187,12 @@ function askQuestion(number) {
     question.textContent = "Is " + number + " the next digit in your phone number?";
     yeah.textContent = "Yes";
     nope.textContent = "No";
-    
 
 };
 
 
 function ballDrop() {
-    // console.log(vel);
+    //console.log(vel);
 
     ball.style.top = "300px";
 
