@@ -10,7 +10,7 @@ body {
 }
 /* each number option is its own grid placement */
 #grid-container {
-    margin-top: 250px;
+    margin-top: 200px;
     display: grid;
     padding: 5px;
     text-align: center;

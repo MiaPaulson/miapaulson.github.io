@@ -194,7 +194,7 @@ function askQuestion(number) {
 function ballDrop() {
     //console.log(vel);
 
-    ball.style.top = "300px";
+    ball.style.top = "250px";
 
     // make the animation stop
     //(for some reason just making it "stop" true and returning in the animation function doesn't work... ugh)
