@@ -247,6 +247,10 @@ function ballDrop() {
         number = 9;
         askQuestion(number);
     }
+    // in case the ball is dropped past the 9 or another weird spot
+    else{
+        keepGoing();
+    }
 
 };
 
